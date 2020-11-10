@@ -2,12 +2,7 @@
 #include <cstdlib>
 #include "clases.h"
 
-
 using namespace std;
-
-
-
-
 
 int main(){
 	

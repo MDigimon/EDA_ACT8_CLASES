@@ -28,3 +28,11 @@ string Computadora::get_nombre(){
 	return nombre;		
 }
 
+void Laboratorio::agregarFinal(Computadora _compu){
+	
+}
+
+void Laboratorio::mostrar(){
+	
+}
+

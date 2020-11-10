@@ -23,4 +23,12 @@ class Computadora{
 		string get_nombre();
 };
 
+class Laboratorio{
+	private:
+		Computadora compus[5];
+	public:
+		void agregarFinal(Computadora _compu);
+		void mostrar();
+};
+
 #endif
