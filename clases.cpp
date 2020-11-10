@@ -29,7 +29,7 @@ string Computadora::get_nombre(){
 }
 
 void Laboratorio::agregarFinal(Computadora _compu){
-	
+	compu=_compu;
 }
 
 void Laboratorio::mostrar(){
