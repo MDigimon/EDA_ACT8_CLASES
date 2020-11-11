@@ -8,25 +8,27 @@ using namespace std;
 class Computadora{
 	private:
 		int mem_RAM;
-		string capacidad;
+		float capacidad;
 		string so;
 		string nombre;
 	public:
 		Computadora();
 		void set_ram(int mem);
 		int get_ram();
-		void set_capacidad(int cap);
-		string get_capacidad();
-		void set_so(int sistema);
+		void set_capacidad(float cap);
+		float get_capacidad();
+		void set_so(const string &sistema);
 		string get_so();
-		void set_nombre(int nom);
+		void set_nombre(const string &nom);
 		string get_nombre();
 };
 
 class Laboratorio{
 	private:
-		Computadora compus[5];
+		Computadora computadoras[5];
+		int indice;
 	public:
+		Laboratorio();
 		void agregarFinal(Computadora _compu);
 		void mostrar();
 };
