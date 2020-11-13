@@ -10,6 +10,7 @@ int main(){
 	string opc;
 	int f=1;
 	Laboratorio l;
+	Computadora c;
 	
 	while(f==1){
 		cout<<"1.-Ingresar los datos de una nueva pc"<<endl;
@@ -19,16 +20,20 @@ int main(){
 		cin>>opc;
 		
 		if(opc=="1"){
-			
+			cout<<"Dato: "<<endl;
 		}
 		else if(opc=="2"){
 			
 		}
-		else if(opc=="2"){
+		else if(opc=="3"){
 			
 		}
-		else if(opc=="2"){
+		else if(opc=="4"){
 			
+		}
+		else{
+			cout<<"Opcion Incorrecta"<<endl;
+			system("pause");
 		}
 		
 		

@@ -29,7 +29,7 @@ class Laboratorio{
 		int indice;
 	public:
 		Laboratorio();
-		void agregarFinal(Computadora _compu);
+		void agregarFinal(Computadora compu);
 		void mostrar();
 };
 

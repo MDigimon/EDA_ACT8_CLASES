@@ -28,17 +28,27 @@ string Computadora::get_nombre(){
 	return nombre;		
 }
 
-
 Laboratorio::Laboratorio(){
 	indice=0;
-}
+};
 
-void Laboratorio::agregarFinal(Computadora _compu){
-	this->computadoras[this->indice]=_compu;
-	indice++;
+void Laboratorio::agregarFinal(Computadora compu){
+	if(indice<5){
+		this->computadoras[this->indice]=compu;
+		indice++;
+	}
+	else{
+		cout<<"Ya no se pueden agregar mas computadoras"<<endl;
+	}
 }
 
 void Laboratorio::mostrar(){
-	
+	for(int i=0; i<indice; i++){
+		Computadora &c=computadoras[i];
+		cout<<"Nombre: "<<c.get_nombre()<<endl;
+		cout<<"Sistema Operativo: "<<c.get_so()<<endl;
+		cout<<"Memoria RAM: "<<c.get_so()<<" Gb"<<endl;
+		cout<<"Almacenamiento: "<<c.get_so()<<"Gb" <<endl<<endl;
+	}
 }
 
