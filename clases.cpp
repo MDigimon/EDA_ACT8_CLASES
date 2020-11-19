@@ -3,6 +3,13 @@
 Computadora::Computadora(){
 };
 
+Computadora::Computadora(string _nombre, string _so, int _ram, float _memoria){
+	this->nombre = _nombre;
+	this->so = _so;
+	this->mem_RAM = _ram;
+	this->capacidad = _memoria;
+};
+
 void Computadora::set_ram(int mem){
 	this->mem_RAM=mem;
 }
@@ -29,7 +36,7 @@ string Computadora::get_nombre(){
 }
 
 Laboratorio::Laboratorio(){
-	indice=0;
+	this->indice=0;
 };
 
 void Laboratorio::agregarFinal(Computadora compu){
@@ -45,10 +52,19 @@ void Laboratorio::agregarFinal(Computadora compu){
 void Laboratorio::mostrar(){
 	for(int i=0; i<indice; i++){
 		Computadora &c=computadoras[i];
+		cout<<"Numero: "<<i+1<<endl;
 		cout<<"Nombre: "<<c.get_nombre()<<endl;
 		cout<<"Sistema Operativo: "<<c.get_so()<<endl;
-		cout<<"Memoria RAM: "<<c.get_so()<<" Gb"<<endl;
-		cout<<"Almacenamiento: "<<c.get_so()<<"Gb" <<endl<<endl;
+		cout<<"Memoria RAM: "<<c.get_ram()<<" Gb"<<endl;
+		cout<<"Almacenamiento: "<<c.get_capacidad()<<"Gb" <<endl<<endl;
 	}
+}
+
+int Laboratorio::get_indice(){
+	return this->indice;
+}
+
+Computadora Laboratorio::get_computadora(int i){
+	return this->computadoras[i];
 }
 

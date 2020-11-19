@@ -13,6 +13,7 @@ class Computadora{
 		string nombre;
 	public:
 		Computadora();
+		Computadora(string _nombre, string _so, int _ram, float _memoria);
 		void set_ram(int mem);
 		int get_ram();
 		void set_capacidad(float cap);
@@ -31,6 +32,8 @@ class Laboratorio{
 		Laboratorio();
 		void agregarFinal(Computadora compu);
 		void mostrar();
+		int get_indice();
+		Computadora get_computadora(int i);
 };
 
 #endif
