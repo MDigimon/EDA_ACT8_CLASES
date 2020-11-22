@@ -67,4 +67,3 @@ int Laboratorio::get_indice(){
 Computadora Laboratorio::get_computadora(int i){
 	return this->computadoras[i];
 }
-

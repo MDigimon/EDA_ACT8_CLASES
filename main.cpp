@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cstdlib>
-#include "clases.h"
+
+
 #include "funciones.h"
+#include "clases.h"
 
 using namespace std;
 
@@ -24,30 +26,7 @@ int main(){
 		
 		if(opc=="1"){
 			if(l.get_indice() < 5){
-				cout<<"-----INGRESE LOS DATOS-----"<<endl << endl;
-				cout << "Nombre: ";
-				cin >> a;
-				fflush(stdin);
-				cout << "Sistema Operativo: ";
-				cin >> b;
-				fflush(stdin);
-				cout << "Memoria RAM (Gb): ";
-				cin >> c;
-				fflush(stdin);
-				x = comprobar_i(c);
-				if(x != -1){
-					cout << "Almacenamiento (Gb): ";
-					cin >> d;
-					fflush(stdin);
-					y = comprobar_f(d);
-					if(y != -1){
-						temp.set_nombre(a);
-						temp.set_so(b);
-						temp.set_ram(x);
-						temp.set_capacidad(y);
-						l.agregarFinal(temp);
-					}
-				}
+				cin >> temp;
 			}
 			else{
 				cout << "No Hay Espacio para Registrar mas Computadoras" << endl;
