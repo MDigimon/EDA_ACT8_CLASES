@@ -1,6 +1,7 @@
 #ifndef clases
 #define clases
 
+#include <iomanip>
 #include <iostream>
 
 using namespace std;
@@ -24,7 +25,12 @@ class Computadora{
 		string get_nombre();
 		
 		friend ostream& operator <<(ostream &out, const Computadora &comp){
-			
+			out << left;
+			out << setw(15) << comp.nombre;
+			out << setw(18) << comp.so;
+			out << setw(12) << comp.mem_RAM;
+			out << setw(15) << comp.capacidad;
+			out << endl;
 		}
 		friend istream& operator >>(istream &in, Computadora &comp){
 			

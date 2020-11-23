@@ -50,13 +50,22 @@ void Laboratorio::agregarFinal(Computadora compu){
 }
 
 void Laboratorio::mostrar(){
+	cout << left;
+	cout << setw(8) << "Numero";
+	cout << setw(15) << "Nombre";
+	cout << setw(18) << "Sistema Operativo";
+	cout << setw(12) << "Memoria RAM";
+	cout << setw(15) << "Almacenamiento";
+	cout << endl;
 	for(int i=0; i<indice; i++){
 		Computadora &c=computadoras[i];
-		cout<<"Numero: "<<i+1<<endl;
-		cout<<"Nombre: "<<c.get_nombre()<<endl;
-		cout<<"Sistema Operativo: "<<c.get_so()<<endl;
-		cout<<"Memoria RAM: "<<c.get_ram()<<" Gb"<<endl;
-		cout<<"Almacenamiento: "<<c.get_capacidad()<<"Gb" <<endl<<endl;
+		cout << setw(8) << i+1;
+		cout << c;
+		
+		//cout << setw(15) << c.get_nombre() << endl;
+		//cout << setw(18) <<c.get_so() << endl;
+		//cout << setw(12) << c.get_ram() << " Gb"<< endl;
+		//cout << setw(15) << c.get_capacidad() << "Gb" << endl << endl;
 	}
 }
 

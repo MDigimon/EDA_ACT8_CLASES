@@ -27,6 +27,7 @@ int main(){
 		if(opc=="1"){
 			if(l.get_indice() < 5){
 				cin >> temp;
+				l.agregarFinal(temp);
 			}
 			else{
 				cout << "No Hay Espacio para Registrar mas Computadoras" << endl;
@@ -53,9 +54,9 @@ int main(){
 				if(x != -1){
 					if(x <= l.get_indice() && x > 0){
 						Computadora temp2 = Computadora(l.get_computadora(x-1).get_nombre(),
-											l.get_computadora(x-1).get_so(),
-											l.get_computadora(x-1).get_ram(),
-											l.get_computadora(x-1).get_capacidad());
+						l.get_computadora(x-1).get_so(),
+						l.get_computadora(x-1).get_ram(),
+						l.get_computadora(x-1).get_capacidad());
 						l.agregarFinal(temp2);
 					}
 					else{
