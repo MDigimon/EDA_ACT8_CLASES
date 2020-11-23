@@ -27,7 +27,7 @@ int main(){
 		if(opc=="1"){
 			if(l.get_indice() < 5){
 				cin >> temp;
-				l.agregarFinal(temp);
+				l << temp;
 			}
 			else{
 				cout << "No Hay Espacio para Registrar mas Computadoras" << endl;
@@ -57,7 +57,7 @@ int main(){
 						l.get_computadora(x-1).get_so(),
 						l.get_computadora(x-1).get_ram(),
 						l.get_computadora(x-1).get_capacidad());
-						l.agregarFinal(temp2);
+						l << temp2;
 					}
 					else{
 						cout << "Dato Incorreto" << endl;
