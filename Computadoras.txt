@@ -1,4 +1,12 @@
-mIGUELON
-Windows
+PC_01
+Windows10
 8
-1000
+1200
+JoseLuis
+Linux
+6
+750
+LaMamalona
+Windows10
+16
+3000

@@ -84,7 +84,7 @@ int main(){
 		}
 		else if(opc=="4"){
 			l.respaldar();
-			cout << "DATOS RESPALDADOS";
+			cout << "DATOS RESPALDADOS" << endl;
 			system("pause");
 		}
 		else if(opc=="5"){
