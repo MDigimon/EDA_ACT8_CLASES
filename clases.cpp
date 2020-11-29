@@ -68,3 +68,21 @@ Computadora Laboratorio::get_computadora(int i){
 	return this->computadoras[i];
 }
 
+<<<<<<< Updated upstream
+=======
+void Laboratorio::respaldar(){
+	ofstream archivo("Computadoras.txt");
+	if(archivo.is_open()){
+		for(int i=0; i < indice; i++){
+			Computadora &c = computadoras[i];
+			
+			archivo << c.get_nombre() << endl;
+			archivo << c.get_so() << endl;
+			archivo << c.get_ram() << endl;
+			archivo << c.get_capacidad() << endl;
+		}
+	}
+	archivo.close();
+	
+}
+>>>>>>> Stashed changes

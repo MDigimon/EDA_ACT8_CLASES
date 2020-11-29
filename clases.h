@@ -2,6 +2,7 @@
 #define clases
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -34,6 +35,16 @@ class Laboratorio{
 		void mostrar();
 		int get_indice();
 		Computadora get_computadora(int i);
+<<<<<<< Updated upstream
+=======
+		void respaldar();
+		void recuperar();
+		
+		friend Laboratorio& operator <<(Laboratorio &lab, const Computadora &c){
+			lab.agregarFinal(c);
+			return lab;
+		}
+>>>>>>> Stashed changes
 };
 
 #endif
