@@ -69,7 +69,10 @@ Computadora Laboratorio::get_computadora(int i){
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 void Laboratorio::respaldar(){
 	ofstream archivo("Computadoras.txt");
 	if(archivo.is_open()){
@@ -85,4 +88,7 @@ void Laboratorio::respaldar(){
 	archivo.close();
 	
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

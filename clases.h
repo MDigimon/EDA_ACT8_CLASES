@@ -36,7 +36,10 @@ class Laboratorio{
 		int get_indice();
 		Computadora get_computadora(int i);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 		void respaldar();
 		void recuperar();
 		
