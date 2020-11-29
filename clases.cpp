@@ -50,13 +50,22 @@ void Laboratorio::agregarFinal(Computadora compu){
 }
 
 void Laboratorio::mostrar(){
+	cout << left;
+	cout << setw(8) << "Numero";
+	cout << setw(15) << "Nombre";
+	cout << setw(18) << "Sistema Operativo";
+	cout << setw(12) << "Memoria RAM";
+	cout << setw(15) << "Almacenamiento";
+	cout << endl;
 	for(int i=0; i<indice; i++){
 		Computadora &c=computadoras[i];
-		cout<<"Numero: "<<i+1<<endl;
-		cout<<"Nombre: "<<c.get_nombre()<<endl;
-		cout<<"Sistema Operativo: "<<c.get_so()<<endl;
-		cout<<"Memoria RAM: "<<c.get_ram()<<" Gb"<<endl;
-		cout<<"Almacenamiento: "<<c.get_capacidad()<<"Gb" <<endl<<endl;
+		cout << setw(8) << i+1;
+		cout << c;
+		
+		//cout << setw(15) << c.get_nombre() << endl;
+		//cout << setw(18) <<c.get_so() << endl;
+		//cout << setw(12) << c.get_ram() << " Gb"<< endl;
+		//cout << setw(15) << c.get_capacidad() << "Gb" << endl << endl;
 	}
 }
 
@@ -68,11 +77,6 @@ Computadora Laboratorio::get_computadora(int i){
 	return this->computadoras[i];
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
 void Laboratorio::respaldar(){
 	ofstream archivo("Computadoras.txt");
 	if(archivo.is_open()){
@@ -86,9 +90,41 @@ void Laboratorio::respaldar(){
 		}
 	}
 	archivo.close();
-	
 }
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
+void Laboratorio::recuperar(){
+	ifstream archivo("Computadoras.txt");
+	if(archivo.is_open()){
+		string temp;
+		int ram;
+		float capacidad;
+		Computadora x;
+		
+		//Vacia el contenido
+		for(int i=0; i < 5; i++){
+			this->computadoras[i] = x;
+		}
+		this->indice = 0;
+		
+		while(true){
+			getline(archivo, temp);
+			if(archivo.eof())
+				break;
+			x.set_nombre(temp);
+			
+			getline(archivo, temp);
+			x.set_so(temp);
+			
+			getline(archivo, temp);
+			istringstream(temp) >> ram;
+			x.set_ram(ram);
+			
+			getline(archivo, temp);
+			istringstream(temp) >> capacidad;
+			x.set_capacidad(capacidad);
+			
+			this->agregarFinal(x);
+		}
+	}
+	archivo.close();
+}

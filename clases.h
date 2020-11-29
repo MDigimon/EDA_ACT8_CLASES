@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -23,6 +25,36 @@ class Computadora{
 		string get_so();
 		void set_nombre(const string &nom);
 		string get_nombre();
+		
+		friend ostream& operator <<(ostream &out, const Computadora &comp){
+			out << left;
+			out << setw(15) << comp.nombre;
+			out << setw(18) << comp.so;
+			out << setw(12) << comp.mem_RAM;
+			out << setw(15) << comp.capacidad;
+			out << endl;
+		}
+		friend istream& operator >>(istream &in, Computadora &comp){
+			
+			cout << "Nombre: ";
+			cin >> comp.nombre;
+			fflush(stdin);
+			
+			cout << "Sistema Operativo: ";
+			cin >> comp.so;
+			fflush(stdin);
+			
+			cout << "Memoria RAM (Gb): ";
+			cin >> comp.mem_RAM;
+			fflush(stdin);
+			
+			cout << "Almacenamiento (Gb): ";
+			cin >> comp.capacidad;
+			fflush(stdin);
+			
+			
+			return in;
+		}
 };
 
 class Laboratorio{
@@ -35,11 +67,6 @@ class Laboratorio{
 		void mostrar();
 		int get_indice();
 		Computadora get_computadora(int i);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
 		void respaldar();
 		void recuperar();
 		
@@ -47,7 +74,6 @@ class Laboratorio{
 			lab.agregarFinal(c);
 			return lab;
 		}
->>>>>>> Stashed changes
 };
 
 #endif
