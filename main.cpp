@@ -18,7 +18,9 @@ int main(){
 		cout<<"1.-Ingresar los datos de una nueva pc"<<endl;
 		cout<<"2.-Ingresar los datos de una pc ya registrada"<<endl;
 		cout<<"3.-Ver las computadoras existentes"<<endl;
-		cout<<"4.-Salir"<<endl;
+		cout<<"4.-Respaldar Datos"<<endl;
+		cout<<"5.-Recuperar Datos"<<endl;
+		cout<<"6.-Salir"<<endl;
 		cin>>opc;
 		fflush(stdin);
 		
@@ -79,8 +81,28 @@ int main(){
 			}
 			system("pause");
 			system("cls");
-		}	
+		}
 		else if(opc=="4"){
+			l.respaldar();
+			cout << "DATOS RESPALDADOS";
+			system("pause");
+		}
+		else if(opc=="5"){
+			cout << "Al recuperar los datos se eliminaran los datos actuales" << endl;
+			cout << "\t¿Quieres continuar? \n \t   1:Si   2:N0" << endl;
+			cin >> a;
+			if(a == "1"){
+				l.recuperar();
+				cout << "DATOS RECUPERADOS" << endl;
+			}
+			else if(a == "2")
+				cout << "DATOS NO RECUPERADOS" << endl;
+			else
+				cout << "OPCION INCORRECTA" << endl;
+			
+			system("pause");
+		}
+		else if(opc=="6"){
 			f=0;
 		}
 		else{
